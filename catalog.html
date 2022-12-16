@@ -17,20 +17,42 @@
     <label for="site-search">Search the model:</label>
     <input type="search" id="site-search" name="model"> <br>
 
-    <input type="checkbox" id="passenger" name="passenger" value="passenger">
-    <label for="passenger"> passenger car</label><br>
-    <input type="checkbox" id="truck" name="truck" value="truck">
-    <label for="truck"> truck</label><br>
-    <input type="checkbox" id="bus" name="bus" value="bus">
-    <label for="vehicle3"> bus</label>
+    <div>
+      <input id="allRadioType" type="radio" name="type" aria-labelledby="allRadioType" value="all" checked="checked">
+      <label for="allRadioType">Всі <span>авто</span></label>
+      <input id="buRadioType" type="radio" name="type" aria-labelledby="buRadioType" value="bu">
+      <label for="buRadioType">Вживані
+        <span>авто</span></label>
+      <input id="naRadioType" type="radio" name="type" aria-labelledby="naRadioType" value="na">
+      <label for="naRadioType">Нові <span>авто</span></label>
+      <input id="orderRadioType" type="radio" name="type" aria-labelledby="orderRadioType" value="order">
+      <label for="orderRadioType">Під пригон</label>
+    </div>
 
-    <p>Choose car's colors:</p>
+    <div><select id="categories" name="category_id" data-field="category" aria-label="Тип транспорту"
+        data-placeholder="Будь-який" class="e-form">
+        <option value="0">Будь-який</option>
+        <option selected="selected" value="1">Легкові</option>
+        <option value="2">Мото</option>
+        <option value="6">Вантажівки</option>
+        <option value="5">Причепи</option>
+        <option value="4">Спецтехніка</option>
+        <option value="10">Сільгосптехніка</option>
+        <option value="7">Автобуси</option>
+        <option value="3">Водний транспорт</option>
+        <option value="9">Повітряний транспорт</option>
+        <option value="8">Автобудинки</option>
+      </select></div>
+
+
 
     <div>
+      <p>Choose car's colors:</p>
       <input type="color" id="car body" name="car body" value="#00000065">
       <label for="car body">Head</label> <br>
     </div>
     <input type="submit" value="Submit">
+
   </form>
 </body>
 
